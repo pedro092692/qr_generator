@@ -36,7 +36,7 @@ function linkConverter(userLink){
 }
 
 function saveUrl(url){
-    fs.appendFile('URL.txt', `${url}\n`, (err)=>{
+    fs.appendFile('URL.txt', `${url}\n`, {encoding:'utf-8'}, (err)=>{
         if(err) throw err;
         console.log('file updated');
     });
